@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Manupilating Elements</title>
+</head>
+
+<body>
+   <ul id="list">
+    <li>one</li>
+    <li>two</li>
+    <li >three</li>
+   </ul>
+<h1> Manupilating Elements</h1>
+<div id="heading"></div>
+<script>
+    // creating an element 
+    let div = document.createElement("div");
+    div.innerHTML="<p> Manupilating Elements</p>";
+    // giving id and classname to the div
+    div.id="test";
+    div.className="test"
+    // this is appending or adding the created div to our body
+
+    document.body.appendChild(div);
+    console.log(div);
+    // appendChild is used to add the new node to the existing node
+    // at any position
+    let head = document.getElementById("heading");
+    let h1 = document.createElement("h1");
+    h1.innerHTML ="Manipulating Elements Heading";
+    head.appendChild(h1);
+    // getting only textcontent while ignoring the html tags
+    let list = document.getElementById("list")
+    console.log(list.textContent);
+    // the diff between textcontent and inntext is
+    // it also follows style like display none 
+    // it wont change colors and size in console if u r wondering
+    // that means it will only show visible text
+    // so it wont show in the console while in textContent
+    // it will show up
+    console.log(list.innerText)
+
+    // prepend is used to add new node at the start
+    let h2 = document.createElement("h2");
+        h2.innerHTML = "Manipulating Elements Heading with prepend";
+        h1.prepend(h2)
+
+    // append method is same as append child but append takes more 
+    // than one node and also set the new content as the last child
+    //eg.
+    //parent.append(Node) 
+
+    // insertAdjacentHTML it also sets ur new mode
+    // but it takes two arguments
+    // where u want to set like beforeend afterbegin etc.
+    // and what u want to insert
+   list.insertAdjacentHTML("beforeend","<li>Four</li>")
+
+   // replaceChild as the name suggest 
+   //parentNode.replaceChild(newchild,oldChild);
+
+   //removeChild as the name suggest it removes the node
+  list.removeChild(list.lastElementChild)
+   console.log(list)
+   
+</script>
+</body>
+
+
+</html>

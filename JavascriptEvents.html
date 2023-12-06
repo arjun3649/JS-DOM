@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <title> JS Events </title>
+</head>
+
+<body>
+   <div id="container">
+
+    <button type="button" id="btn" ">click here</button>
+   </div>
+   
+</body>
+<script>
+   //let btn = document.getElementById("btn");
+    //AddEventlistener
+    // it takes three arguments
+    // 1. type of event eg. click , mouseover etc
+    // 2. function
+    //3. useCapture  it is a boolean value which is optional and by default its false
+    btn.addEventListener('mouseover',function(event){
+        console.log("btn is clicked from addEventListener")
+        // and by adding event in function v can get its values
+        console.log(event)
+        console.log(event.type)
+       
+    })
+    // removeEventListener it removes the event listener which v added via AddEventListener
+    // it takes the same arguments lets say v need to remove the above addeventlistener
+    // btn.removeEventListener('mouseover',function()) and it will be removed
+    // one thing to notice is v cant remove the eventlistener with anonymour functions
+    // like this btn.addEventListener('clicked',function (){
+        // this is a anonymous fucntion
+   // })
+   // so v need proper name
+   
+
+
+</script>
+
+
+
+</html>

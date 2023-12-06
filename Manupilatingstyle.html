@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Manupilating Styles </title>
+</head>
+
+<body>
+    <input type="text" 
+    id="username" 
+    placeholder="username"
+    style="background-color: red; font-size:20px"
+    >
+</body>
+<script>
+   let input= document.getElementById("username")
+   // style show you the inline styles added to the element
+   // and style.backgroundColor will show you the value.
+   // when using it here v dont use - in between instead v 
+   // uppercase the first word of next word like backgroundColor
+   console.log(input.style)
+   console.log(input.style.backgroundColor)
+   // adding the style
+   input.style.padding = "10px";
+   console.log(input)
+   // adding style using csstext
+   // but only using this  will override other style
+   //input.style.cssText = "width:500px"
+  
+   // to keep the all the styles + cssText v do concatinate
+   // v can also add multiple css properties
+   input.style.cssText+="width : 500px ; color : white"
+   console.log(input)
+</script>
+
+
+
+</html>

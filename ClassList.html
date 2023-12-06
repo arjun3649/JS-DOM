@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Class List </title>
+</head>
+
+<body>
+    <input 
+    type="text" 
+    id="username" 
+    class="main message" 
+    placeholder="username">
+</body>
+<script>
+    let input = document.getElementById("username")
+    // it gives the list of classes in input
+    // in input v have two class names "main and message"
+    console.log(input.classList)
+    // adding another class or multiple classes
+    input.classList.add("new","new2","new3")
+    console.log(input)
+    // remove classes 
+    input.classList.remove( "new2", "new3")
+    console.log(input)
+    //replace class
+     input.classList.replace("new", "old")
+     console.log(input)
+     // to check for class v use .contains which is a boolean
+     console.log(input.classList.contains("new")) //false
+
+     // .toggle what it does is if the 
+     // classname is there it will remove it and if its not
+     // there it will add it.
+     input.classList.toggle("old");
+     console.log(input);
+
+
+    
+</script>
+
+
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <head>
+        <title> Getting Elements</title>
+    </head>
+    <body>
+        <div id="message">Javascript DOM</div>
+        <div>
+            <h3 class="messge"> first </h3>
+            <h3 class="messge"> second </h3>
+            <h3 class="messge"> third </h3>
+            <div id="fourth">
+                <h3 class="message"> fourth </h3>
+            </div>
+            
+            <input type="radio" name="language" value="Js">
+            <label> Js </label><br>
+            <input type="radio" name="language" value="Python" >
+            <label> Python</label>
+        </div>
+    </body>
+    <script>
+        // getelement by ID
+        let msg= document.getElementById("message");
+        console.log(msg);
+        // getelemnt by name
+        let btn = document.getElementsByName("language");
+        console.log(btn);
+        // getelement by tagname
+        let heading = document.getElementsByTagName("h3")
+        console.log(heading)
+        // getelement by classname
+        let message = document.getElementsByClassName("messge")
+        console.log(message)
+        // getting an element from inside a container
+        let fourthDiv = document.getElementById("fourth")
+        let four = fourthDiv.getElementsByClassName("message")
+        console.log(four)
+        // getting an element by queryselector
+         let qs = document.querySelector(".message")
+         console.log(qs)
+         // getting an element by queryselectorALL
+         let qsa = document.querySelectorAll(".messge")
+            console.log(qsa)
+    </script>
+
+
+
+</html>

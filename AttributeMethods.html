@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+        <title> Attributes Methods</title>
+    </head>
+    <body>
+        <input type="text" id="username" placeholder="username">
+    </body>
+    <script>
+       let input = document.getElementById("username")
+       // it gives the attributes of the element
+      console.log( input.attributes)
+      // getAttribute() it gives the type of attributes
+      console.log(input.getAttribute("type"))
+       console.log(input.getAttribute("id"))
+        console.log(input.getAttribute("placeholder"))
+        //setAttribute set the attribute value
+        // v can use this is add new attribute or change the existing attribute
+        input.setAttribute("type","email");
+         input.setAttribute("class", "username");
+        console.log(input)
+        // hasAttribute() is a boolean if there is a attribute or not
+        console.log(input.hasAttribute("name")) // false
+
+        // removeAttribute removes the attribute
+        input.removeAttribute("class") 
+        console.log(input)
+    </script>
+
+
+
+</html>
